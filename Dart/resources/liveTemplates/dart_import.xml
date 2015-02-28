@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Dart Imports">
+
+  <template name="html" value="import &quot;dart:html&quot;;&#10;$END$" description="live template" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+  <template name="math" value="import &quot;dart:math&quot;;&#10;$END$" description="live template" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+  <template name="async" value="import &quot;dart:async&quot;;&#10;$END$" description="live template" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+  <template name="io" value="import &quot;dart:io&quot;;&#10;$END$" description="live template" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+  <template name="convert" value="import &quot;dart:convert&quot;;&#10;$END$" description="live template" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+  <template name="svg" value="import &quot;dart:svg&quot;;&#10;$END$" description="live template" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+
+</templateSet>
+

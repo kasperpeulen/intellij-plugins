@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Dart YAML">
+
+  <template name="dart" value="name: $PROJECT_NAME$&#10;version: $VERSION$&#10;description: $DESCRIPTION$&#10;environment:&#10;  sdk: '&gt;=1.0.0 &lt;2.0.0'&#10;dependencies:&#10;$END$" description="Minimal dart pubspec."
+            toReformat="true" toShortenFQNames="true">
+    <variable name="PROJECT_NAME" expression="" defaultValue="projectName()" alwaysStopAt="true"/>
+    <variable name="VERSION" expression="" defaultValue="&quot;0.0.1&quot;" alwaysStopAt="true"/>
+    <variable name="DESCRIPTION" expression="concat(&quot;My &quot;,concat(projectName(),&quot; Dart Application.&quot;))" defaultValue="" alwaysStopAt="true"/>
+
+    <context>
+      <option name="DART_YAML" value="true"/>
+    </context>
+  </template>
+
+  <template name="dep_browser" value="  browser: $VERSION$&#10;$END$" description="Browser package."
+            toReformat="true" toShortenFQNames="true">
+    <variable name="VERSION" expression="suggestList(&quot;any&quot;,&quot;'&gt;=0.10.0+2 &lt;0.11.0'&quot;)" defaultValue="" alwaysStopAt="true"/>
+
+    <context>
+      <option name="DART_YAML" value="true"/>
+    </context>
+  </template>
+
+  <template name="dep_http_server" value="  http_server: $VERSION$&#10;$END$" description="http_server package."
+            toReformat="true" toShortenFQNames="true">
+    <variable name="VERSION" expression="suggestList(&quot;any&quot;,&quot;'&gt;=0.9.5+1 &lt;0.10.0'&quot;)" defaultValue="" alwaysStopAt="true"/>
+
+    <context>
+      <option name="DART_YAML" value="true"/>
+    </context>
+  </template>
+
+  <template name="dep_polymer" value="  polymer: $VERSION$&#10;$END$" description="Polymer package."
+            toReformat="true" toShortenFQNames="true">
+    <variable name="VERSION" expression="suggestList(&quot;any&quot;,&quot;'&gt;=0.15.5+4 &lt;0.16.0'&quot;)" defaultValue="" alwaysStopAt="true"/>
+
+    <context>
+      <option name="DART_YAML" value="true"/>
+    </context>
+  </template>
+
+  <template name="dep_code_transformers" value="  code_transformers: $VERSION$&#10;$END$" description="code_transformers package."
+            toReformat="true" toShortenFQNames="true">
+    <variable name="VERSION" expression="suggestList(&quot;any&quot;,&quot;'&gt;=0.2.5 &lt;0.3.0'&quot;)" defaultValue="" alwaysStopAt="true"/>
+
+    <context>
+      <option name="DART_YAML" value="true"/>
+    </context>
+  </template>
+
+  <template name="dep_unittest" value="  unittest: $VERSION$&#10;$END$" description="unittest package."
+            toReformat="true" toShortenFQNames="true">
+    <variable name="VERSION" expression="suggestList(&quot;any&quot;,&quot;'&gt;=0.11.5+4 &lt;0.12.0'&quot;)" defaultValue="" alwaysStopAt="true"/>
+
+    <context>
+      <option name="DART_YAML" value="true"/>
+    </context>
+  </template>
+</templateSet>
+

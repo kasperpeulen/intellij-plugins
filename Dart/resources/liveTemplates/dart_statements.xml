@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Zen Dart">
+
+  <template name="main" value="void main(){&#10;$END$&#10;}" description="live template" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+
+  <template name="if" value="if ($STATEMENT$) {&#10; $END$ &#10;}" description="if (...) {...}" toReformat="true" toShortenFQNames="true">
+    <variable name="STATEMENT" expression="dartSuggestVariable(&quot;bool&quot;)" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_STATEMENT" value="true"/>
+    </context>
+  </template>
+
+  <template name="elif" value="else if ($STATEMENT$) {&#10; $END$ &#10;}" description="else if (...) {...}" toReformat="true" toShortenFQNames="true">
+    <variable name="STATEMENT" expression="dartSuggestVariable(&quot;bool&quot;)" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_STATEMENT" value="true"/>
+    </context>
+  </template>
+
+  <template name="else" value="else {&#10; $END$ &#10;}" description="else {...}" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true"/>
+    </context>
+  </template>
+
+  <template name="switch" value="switch ($VARIABLE$) {&#10; $END$ &#10;}" description="switch (...) {...}" toReformat="true" toShortenFQNames="true">
+    <variable name="VARIABLE" expression="" defaultValue="&quot;variable&quot;" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_STATEMENT" value="true"/>
+    </context>
+  </template>
+
+  <template name="while" value="while ($STATEMENT$) {&#10; $END$ &#10;}" description="while (...) {...}" toReformat="true" toShortenFQNames="true">
+    <variable name="STATEMENT" expression="dartSuggestVariable(&quot;bool&quot;)" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_STATEMENT" value="true"/>
+    </context>
+  </template>
+
+  <template name="try" value="try {&#10; $END$ &#10;}" description="try {...}" toReformat="true" toShortenFQNames="true">
+    <variable name="STATEMENT" expression="" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_STATEMENT" value="true"/>
+    </context>
+  </template>
+
+  <template name="do" value="do {&#10; $END$ &#10;} while($STATEMENT$);" description="do {...} while (...);" toReformat="true" toShortenFQNames="true">
+    <variable name="STATEMENT" expression="dartSuggestVariable(&quot;bool&quot;)" defaultValue="&quot;true&quot;" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_STATEMENT" value="true"/>
+    </context>
+  </template>
+
+  <template name="for" value="for (int $i$ = $BEGIN$; $i$ $SIGN$ $LENGTH$ ; $i$ $STEP$) {&#10; $END$ &#10;}" description="for (int i = 0; i &lt; length; i++)" toReformat="true" toShortenFQNames="true">
+    <variable name="i" expression="" defaultValue="&quot;i&quot;" alwaysStopAt="true"/>
+    <variable name="BEGIN" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true"/>
+    <variable name="LENGTH" expression="" defaultValue="&quot;length&quot;" alwaysStopAt="true"/>
+    <variable name="SIGN" expression="dartSuggestSign(BEGIN,LENGTH)" defaultValue="&quot;&lt;&quot;" alwaysStopAt="true"/>
+    <variable name="STEP" expression="dartSuggestForStep(BEGIN,LENGTH)" defaultValue="&quot;++&quot;" alwaysStopAt="true"/>
+
+    <context>
+      <option name="DART_STATEMENT" value="true"/>
+    </context>
+  </template>
+
+
+  <template name="for_in" value="for ($VAR$ $NAME$ in $LIST$) {&#10; $END$ &#10;}" description="for (Object name in list)" toReformat="true" toShortenFQNames="true">
+    <variable name="LIST" expression="dartIterableVariable()" defaultValue="&quot;list/set&quot;" alwaysStopAt="true"/>
+    <variable name="VAR" expression="dartClassNameOfVariable(LIST)" defaultValue="&quot;&quot;" alwaysStopAt="false"/>
+    <variable name="NAME" expression="dartSuggestVariableName(VAR)" defaultValue="&quot;name&quot;" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_STATEMENT" value="true"/>
+    </context>
+  </template>
+
+  <template name="void=>" value="void $NAME$($ARGS$) => $END$ ;" description="void function() => ..."
+            toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;function&quot;" alwaysStopAt="true"/>
+    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+      <option name="DART_STATEMENTS" value="true"/>
+      <option name="DART_CLASS_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+
+  <template name="void" value="void $NAME$($ARGS$) {&#10; $END$ &#10;}" description="void function() {...}"
+            toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;function&quot;" alwaysStopAt="true"/>
+    <variable name="ARGS" expression="" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+      <option name="DART_STATEMENTS" value="true"/>
+      <option name="DART_CLASS_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+
+  <template name="sc" value="static const " description="static const"
+            toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_CLASS_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+
+  <template name="abstract class" value="abstract class $CLASSNAME$ {&#10; $END$ &#10;}" description="abstract class ... {...}"
+            toReformat="true" toShortenFQNames="true">
+    <variable name="CLASSNAME" expression="capitalize(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+
+  <template name="class" value="class $CLASSNAME$ {&#10; $END$ &#10;}" description="class ... {...}"
+            toReformat="true" toShortenFQNames="true">
+    <variable name="CLASSNAME" expression="capitalize(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+
+  <template name="class2" value="class $CLASSNAME$ extends $SUPER$ {&#10; $END$ &#10;}" description="class ... extends ... {...}"
+            toReformat="true" toShortenFQNames="true">
+    <variable name="CLASSNAME" expression="capitalize(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="true"/>
+    <variable name="SUPER" expression="" defaultValue="&quot;Object&quot;" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+
+  <template name="class3" value="class $CLASSNAME$ implements $SUPER$ {&#10; $END$ &#10;}" description="class ... implements ... {...}"
+            toReformat="true" toShortenFQNames="true">
+    <variable name="CLASSNAME" expression="capitalize(fileNameWithoutExtension())" defaultValue="" alwaysStopAt="true"/>
+    <variable name="SUPER" expression="" defaultValue="&quot;Object&quot;" alwaysStopAt="true"/>
+    <context>
+      <option name="DART_TOP_LEVEL" value="true"/>
+    </context>
+  </template>
+
+</templateSet>
+

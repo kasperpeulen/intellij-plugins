@@ -17,7 +17,7 @@ import java.util.Map;
 public class DartGenericSpecialization implements Cloneable {
   public static final DartGenericSpecialization EMPTY = new DartGenericSpecialization();
 
-  final Map<String, DartClassResolveResult> map;
+  public final Map<String, DartClassResolveResult> map;
 
   public DartGenericSpecialization() {
     this(new THashMap<String, DartClassResolveResult>());

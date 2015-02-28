@@ -10,7 +10,11 @@ public class DartLiveTemplatesProvider implements DefaultLiveTemplatesProvider {
   private static final @NonNls String[] DEFAULT_TEMPLATES = new String[]{
     "/liveTemplates/dart_miscellaneous",
     "/liveTemplates/dart_iterations",
-    "/liveTemplates/dart_surround"
+    "/liveTemplates/dart_surround",
+    "/liveTemplates/dart_html",
+    "/liveTemplates/dart_statements",
+    "/liveTemplates/dart_import",
+    "/liveTemplates/dart_yaml"
   };
 
   public String[] getDefaultLiveTemplateFiles() {

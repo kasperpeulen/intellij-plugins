@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="Dart HTML">
+
+  <template description="" name="!dart" toReformat="true" toShortenFQNames="true"
+            value="&lt;!doctype html&gt;&#10;&lt;html lang=&quot;$ENV_LOCALE$&quot;&gt;&#10;&lt;head&gt;&#10;&lt;meta charset=&quot;UTF-8&quot;&gt;&#10;&lt;title&gt;$TITLE$&lt;/title&gt;&#10;&lt;link rel=&quot;stylesheet&quot; href=&quot;$CSS$.css&quot;&gt;&#10;&lt;/head&gt;&#10;
+            &lt;body&gt;&#10;  $END$&#10;&lt;script type=&quot;application/dart&quot; src=&quot;$DART$.dart&quot;&gt;&lt;/script&gt;&#10;&lt;/body&gt;&#10;&lt;/html&gt;">
+
+
+    <variable alwaysStopAt="true" defaultValue="&quot;en&quot;" expression="" name="ENV_LOCALE"/>
+    <variable alwaysStopAt="true" defaultValue="&quot;Document&quot;" expression="" name="TITLE"/>
+    <variable alwaysStopAt="true" defaultValue="&quot;en&quot;" expression="fileNameWithoutExtension()" name="CSS"/>
+    <variable alwaysStopAt="true" defaultValue="&quot;en&quot;" expression="fileNameWithoutExtension()" name="DART"/>
+    <context>
+      <option name="DART_HTML" value="true"/>
+    </context>
+  </template>
+
+</templateSet>
+

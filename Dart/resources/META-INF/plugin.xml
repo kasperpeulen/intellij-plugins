@@ -114,6 +114,7 @@
 
     <internalFileTemplate name="Dart File"/>
 
+
     <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartClassNameMacro"/>
     <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartMethodNameMacro"/>
     <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartMethodParametersMacro"/>
@@ -122,8 +123,24 @@
     <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartIterableVariableMacro"/>
     <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartSuggestIndexNameMacro"/>
     <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartSuggestVariableNameMacro"/>
+    <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartSuggestSign"/>
+    <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartSuggestForStep"/>
+    <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartClassNameOfVariable"/>
+    <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartConcat"/>
+    <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartProjectNameMacro"/>
+    <liveTemplateMacro implementation="com.jetbrains.lang.dart.ide.template.macro.DartSuggestList"/>
 
-    <liveTemplateContext implementation="com.jetbrains.lang.dart.ide.template.DartTemplateContextType"/>
+
+
+    <liveTemplateContext implementation="com.jetbrains.lang.dart.ide.template.DartTemplateContextType$Generic"/>
+    <!--<liveTemplateContext implementation="com.jetbrains.lang.dart.ide.template.DartTemplateContextType$Expression"/>-->
+    <liveTemplateContext implementation="com.jetbrains.lang.dart.ide.template.DartTemplateContextType$Statement"/>
+    <!--<liveTemplateContext implementation="com.jetbrains.lang.dart.ide.template.DartTemplateContextType$Declaration"/>-->
+    <liveTemplateContext implementation="com.jetbrains.lang.dart.ide.template.DartTemplateContextType$TopLevel"/>
+    <liveTemplateContext implementation="com.jetbrains.lang.dart.ide.template.DartTemplateContextType$ClassTopLevel"/>
+    <liveTemplateContext implementation="com.jetbrains.lang.dart.ide.template.DartTemplateContextType$Html"/>
+    <liveTemplateContext implementation="com.jetbrains.lang.dart.ide.template.DartTemplateContextType$Yaml"/>
+
     <defaultLiveTemplatesProvider implementation="com.jetbrains.lang.dart.ide.template.DartLiveTemplatesProvider"/>
 
     <lang.surroundDescriptor language="Dart"

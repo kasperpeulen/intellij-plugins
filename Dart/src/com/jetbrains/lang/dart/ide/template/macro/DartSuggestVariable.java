@@ -8,19 +8,20 @@ import org.jetbrains.annotations.NotNull;
 /**
  * @author: Fedor.Korotkov
  */
-public class DartIterableVariableMacro extends DartFilterByClassMacro {
+public class DartSuggestVariable extends DartFilterByClassMacro {
   @Override
   public String getName() {
-    return "dartIterableVariable";
+    return "dartSuggestVariable";
   }
 
   @Override
   public String getPresentableName() {
-    return "dartIterableVariable()";
+    return "dartSuggestVariable()";
   }
 
   @Override
   protected boolean filter(@NotNull DartClass dartClass, Expression[] params, ExpressionContext context) {
-    return dartClass.findMemberByName("iterator") != null;
+
+    return (dartClass.getName().equals(params[0].calculateResult(context).toString()));
   }
 }
