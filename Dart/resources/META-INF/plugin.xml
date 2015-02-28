@@ -51,6 +51,10 @@
     <colorSettingsPage implementation="com.jetbrains.lang.dart.highlight.DartColorsAndFontsPage"/>
     <lang.foldingBuilder language="Dart" implementationClass="com.jetbrains.lang.dart.folding.DartFoldingBuilder"/>
 
+    <lang.smartEnterProcessor language="Dart"
+                              implementationClass="com.jetbrains.lang.dart.ide.actions.DartSmartEnterProcessor"/>
+
+
     <html.scriptContentProvider language="Dart" implementationClass="com.jetbrains.lang.dart.DartScriptContentProvider"/>
     <writingAccessProvider implementation="com.jetbrains.lang.dart.ide.DartWritingAccessProvider"/>
     <spellchecker.support language="Dart" implementationClass="com.jetbrains.lang.dart.DartSpellcheckingStrategy"/>
